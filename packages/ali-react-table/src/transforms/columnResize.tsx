@@ -123,7 +123,7 @@ export function makeColumnResizeTransform({
               headerCellProps: {
                 className: RESIZE_EXPANDER_CLS,
                 style: {
-                  background: expanderVisibility === 'hidden' ? 'var(--bgcolor)' : undefined,
+                  // background: expanderVisibility === 'hidden' ? 'var(--bgcolor)' : undefined,
                   border: expanderVisibility === 'hidden' ? 'none' : undefined,
                 },
               },

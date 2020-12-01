@@ -1,6 +1,6 @@
 {
-  "name": "ali-react-table",
-  "version": "2.1.1",
+  "name": "ali-react-table-modify",
+  "version": "2.1.2",
   "description": "高性能 React 表格组件",
   "sideEffects": false,
   "module": "dist/ali-react-table.esm.js",
@@ -9,9 +9,9 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/alibaba/ali-react-table.git"
+    "url": "git+https://github.com/zhiaiing/react-table-modify.git"
   },
-  "homepage": "https://github.com/alibaba/ali-react-table",
+  "homepage": "https://github.com/zhiaiing/react-table-modify",
   "author": {
     "name": "Shi Feichao",
     "email": "842351815@qq.com"
@@ -26,6 +26,9 @@
     "dist",
     "pivot"
   ],
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
+  },
   "prettier": {
     "printWidth": 120,
     "singleQuote": true,
@@ -33,6 +36,7 @@
     "trailingComma": "all"
   },
   "dependencies": {
+    "@rollup/plugin-babel": "^5.2.2",
     "@types/classnames": "^2.2.9",
     "classnames": "^2.2.6",
     "react": "^16.9.0 || ^17.0.1",

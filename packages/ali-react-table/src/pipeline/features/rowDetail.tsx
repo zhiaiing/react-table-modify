@@ -169,7 +169,7 @@ export function rowDetail(opts: RowDetailFeatureOptions = {}) {
         if (row[rowDetailMetaKey]) {
           return {
             style: {
-              '--cell-padding': '0',
+              // '--cell-padding': '0',
               overflow: 'hidden',
               ...opts.detailCellStyle,
             } as any,

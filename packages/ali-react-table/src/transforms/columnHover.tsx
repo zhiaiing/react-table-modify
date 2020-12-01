@@ -9,7 +9,7 @@ export interface ColumnHoverOptions {
 }
 
 export function makeColumnHoverTransform({
-  hoverColor = 'var(--hover-bgcolor)',
+  hoverColor = null,
   hoverColIndex,
   onChangeHoverColIndex,
 }: ColumnHoverOptions): TableTransform {
@@ -28,7 +28,7 @@ export function makeColumnHoverTransform({
         const prevCellProps = prevGetCellProps?.(value, record, rowIndex)
 
         return mergeCellProps(prevCellProps, {
-          style: { '--bgcolor': colIndexMatched ? hoverColor : undefined } as any,
+          // style: { '--bgcolor': colIndexMatched ? hoverColor : undefined } as any,
           onMouseEnter() {
             onChangeHoverColIndex(range.start)
           },

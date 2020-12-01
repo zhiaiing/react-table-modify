@@ -111,7 +111,7 @@ export function useAutoWidthTransform(
               headerCellProps: {
                 className: AUTO_WIDTH_EXPANDER_CLS,
                 style: {
-                  background: expanderVisibility === 'hidden' ? 'var(--bgcolor)' : undefined,
+                  // background: expanderVisibility === 'hidden' ? 'var(--bgcolor)' : undefined,
                   border: expanderVisibility === 'hidden' ? 'none' : undefined,
                 },
               },

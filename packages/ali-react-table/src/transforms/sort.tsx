@@ -233,12 +233,12 @@ export function makeSortTransform({
 
             if (highlightColumnWhenActive) {
               result.headerCellProps = mergeCellProps(col.headerCellProps, {
-                style: { background: 'var(--header-highlight-bgcolor)' } as any,
+                // style: { background: 'var(--header-highlight-bgcolor)' } as any,
               })
               result.getCellProps = (value, row, rowIndex) => {
                 const prevCellProps = internals.safeGetCellProps(col, row, rowIndex)
                 return mergeCellProps(prevCellProps, {
-                  style: { background: 'var(--highlight-bgcolor)' } as any,
+                  // style: { background: 'var(--highlight-bgcolor)' } as any,
                 })
               }
             }

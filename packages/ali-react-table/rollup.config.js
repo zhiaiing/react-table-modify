@@ -1,6 +1,7 @@
 import pkg from './package.json'
 import resolve from '@rollup/plugin-node-resolve'
 import typescript from 'rollup-plugin-typescript2'
+import { getBabelOutputPlugin } from '@rollup/plugin-babel';
 
 // @carbon/icons-react 依赖了 prop-types
 const external = Object.keys(pkg.dependencies).concat(['rxjs/operators', 'prop-types'])
@@ -10,6 +11,7 @@ const config = (arg) => ({
     typescript({
       tsconfig: 'tsconfig.json',
     }),
+    getBabelOutputPlugin({ presets: ['@babel/preset-env']}),
     resolve({
       extensions: ['.mjs', '.js', '.jsx', '.json', '.node'],
     }),
