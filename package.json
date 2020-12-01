@@ -1,0 +1,40 @@
+{
+  "name": "ali-react-table-monorepo",
+  "private": true,
+  "version": "0.0.0",
+  "description": "ali-react-table monorepo",
+  "license": "MIT",
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "website:start": "yarn workspace website start",
+    "website:build": "yarn workspace website build",
+    "collect-files": "rimraf website-deploy && copyfiles --up=3 \"packages/website/build/**/*\" website-deploy/",
+    "prepare-website-deploy": "yarn website:build && yarn collect-files"
+  },
+  "resolutions": {
+    "react": "16.14.0",
+    "react-dom": "16.14.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alibaba/ali-react-table.git"
+  },
+  "homepage": "https://github.com/alibaba/ali-react-table",
+  "author": {
+    "name": "Shi Feichao",
+    "email": "842351815@qq.com"
+  },
+  "prettier": {
+    "printWidth": 120,
+    "singleQuote": true,
+    "semi": false,
+    "trailingComma": "all"
+  },
+  "devDependencies": {
+    "copyfiles": "^2.4.0",
+    "prettier": "^2.1.2",
+    "typescript": "^4.0.3"
+  }
+}
